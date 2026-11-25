@@ -1,0 +1,448 @@
+{
+  "generated_at": "2026-11-25T09:25:41+00:00",
+  "jira_project": "KAN",
+  "dataset_label": "tyn-release-assessment-v2",
+  "target_release": "R2.4",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "incomplete_requirements": 11,
+  "overall_decision": "NEEDS_REVIEW",
+  "decision_counts": {
+    "PASS": 1,
+    "INSUFFICIENT_EVIDENCE": 11
+  },
+  "requirements": [
+    {
+      "requirement_key": "KAN-892",
+      "requirement_id": "REQ-01",
+      "decision": "PASS",
+      "rationale": "QA Lead Priya Nair confirmed in KAN-1119#14484 that regression run REG-804 passed completely (146 of 146 mandatory regression cases) on the target build (release R2.4, commit b7a91f2, service atlas-assistant, environment production). The earlier regression run recorded in KAN-933#13552 was conducted on commit 9c3e1aa and is inapplicable to the target commit.",
+      "evidence": [
+        {
+          "issue_key": "KAN-1119",
+          "source_id": "REC-2081",
+          "comment_id": "14484",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-1119?focusedCommentId=14484",
+          "use": "decisive",
+          "note": "QA Lead Priya Nair verified regression run REG-804 on target build (R2.4, b7a91f2, atlas-assistant, production) with 146/146 mandatory cases passing.",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-08T14:00:00+05:30",
+          "excerpt": "Completed regression run REG-804: release R2.4; commit b7a91f2; service atlas-assistant; environment production. 146 of 146 mandatory regression cases pass."
+        },
+        {
+          "issue_key": "KAN-933",
+          "source_id": "REC-2299",
+          "comment_id": "13552",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-933?focusedCommentId=13552",
+          "use": "inapplicable",
+          "note": "Earlier regression run on non-target commit 9c3e1aa.",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-06T15:00:00+05:30",
+          "excerpt": "Regression run REG-779: release R2.4; commit 9c3e1aa; service atlas-assistant; environment production. 143 of 146 mandatory cases pass; 3 failures in citation formatting."
+        }
+      ],
+      "outstanding": [],
+      "title": "[REQ-01] Automated regression tests",
+      "acceptance_criterion": "All automated regression cases must pass on the target build.",
+      "mandatory": true,
+      "assessment_status": "done",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-892"
+    },
+    {
+      "requirement_key": "KAN-1066",
+      "requirement_id": "REQ-02",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-02] Customer document isolation",
+      "acceptance_criterion": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1066"
+    },
+    {
+      "requirement_key": "KAN-1028",
+      "requirement_id": "REQ-03",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-03] Answer quality for deployed prompt",
+      "acceptance_criterion": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1028"
+    },
+    {
+      "requirement_key": "KAN-856",
+      "requirement_id": "REQ-04",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-04] Response latency",
+      "acceptance_criterion": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-856"
+    },
+    {
+      "requirement_key": "KAN-1155",
+      "requirement_id": "REQ-05",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-05] Model usage cost",
+      "acceptance_criterion": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1155"
+    },
+    {
+      "requirement_key": "KAN-876",
+      "requirement_id": "REQ-06",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-06] Production security approval",
+      "acceptance_criterion": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-876"
+    },
+    {
+      "requirement_key": "KAN-1132",
+      "requirement_id": "REQ-07",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-07] Sensitive log redaction",
+      "acceptance_criterion": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1132"
+    },
+    {
+      "requirement_key": "KAN-851",
+      "requirement_id": "REQ-08",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-08] Human handoff delivery",
+      "acceptance_criterion": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-851"
+    },
+    {
+      "requirement_key": "KAN-945",
+      "requirement_id": "REQ-09",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-09] Rollback rehearsal",
+      "acceptance_criterion": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-945"
+    },
+    {
+      "requirement_key": "KAN-858",
+      "requirement_id": "REQ-10",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-10] Document parsing completeness",
+      "acceptance_criterion": "The target build must pass all 60 mandatory document parsing cases.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-858"
+    },
+    {
+      "requirement_key": "KAN-965",
+      "requirement_id": "REQ-11",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-11] Accessible keyboard handoff",
+      "acceptance_criterion": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-965"
+    },
+    {
+      "requirement_key": "KAN-1203",
+      "requirement_id": "REQ-12",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+      "evidence": [],
+      "outstanding": [
+        "Re-run the assessment for this requirement."
+      ],
+      "title": "[REQ-12] Streaming completion integrity",
+      "acceptance_criterion": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "mandatory": true,
+      "assessment_status": "incomplete",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1203"
+    }
+  ],
+  "run_integrity": {
+    "degraded": true,
+    "warnings": [
+      "assess/KAN-1066: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-02: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-1028: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-03: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-856: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-04: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-1155: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-05: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-876: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-06: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-1132: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-07: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-851: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-08: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-945: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-09: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-858: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-10: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-965: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-11: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE",
+      "assess/KAN-1203: LLM unavailable: gemini: HTTP 429; asked to wait 8s, failing over",
+      "REQ-12: no decision submitted (the language model was unavailable); recorded as INSUFFICIENT_EVIDENCE"
+    ],
+    "tool_errors": [],
+    "llm_failures": [
+      {
+        "scope": "assess/KAN-1066",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1066",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1066",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1066",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1028",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1028",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1028",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-856",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-856",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-856",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1155",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1155",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1155",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-876",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-876",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-876",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1132",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1132",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1132",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-851",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-851",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-851",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-945",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-945",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-945",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-858",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-858",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-858",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-965",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-965",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-965",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1203",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1203",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      },
+      {
+        "scope": "assess/KAN-1203",
+        "provider": "gemini",
+        "error": "HTTP 429; asked to wait 8s, failing over"
+      }
+    ]
+  },
+  "metrics": {
+    "wall_seconds": 1712.7,
+    "phase_seconds": {
+      "discovery": 43.2,
+      "assessment": 1669.5,
+      "total": 1712.7
+    },
+    "tool_calls": 32,
+    "jira_api_calls": 45,
+    "jira_api_failures": 0,
+    "unique_issues_opened": 17,
+    "llm_usage": {
+      "gemini": {
+        "calls": 18,
+        "prompt_tokens": 72368,
+        "completion_tokens": 718,
+        "total_tokens": 76452,
+        "failures": 34
+      }
+    },
+    "providers_configured": [
+      "gemini:gemini-3.5-flash"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "requirement_key": "KAN-1066",
+  "requirement_id": "REQ-02",
+  "decision": "FAIL",
+  "rationale": "Requirement REQ-02 fails because target-scope QA evidence shows a confirmed cross-customer document exposure defect on target commit b7a91f2. Specifically, QA Lead Priya Nair recorded in KAN-1109#14427 that under target release R2.4, commit b7a91f2, atlas-assistant, production, customer ALPHA received document BETA-017 belonging to customer BETA, reopening defect ISO-DEF-12. This directly violates the acceptance criterion requiring every isolation case to pass with no cross-customer document exposure. Evidence in KAN-1020#13991 is inapplicable as it pertains to release R2.3 / commit 42d09ce.",
+  "evidence": [
+    {
+      "issue_key": "KAN-1109",
+      "source_id": "REC-1001",
+      "comment_id": "14427",
+      "url": "https://shalininithya001.atlassian.net/browse/KAN-1109?focusedCommentId=14427",
+      "use": "decisive",
+      "note": "QA Lead retest on target scope (release R2.4, commit b7a91f2, service atlas-assistant, environment production) failed with customer ALPHA receiving customer BETA's document BETA-017, reopening defect ISO-DEF-12.",
+      "recorded_actor": "Priya Nair",
+      "recorded_role": "QA Lead",
+      "recorded_event_time": "2026-11-08T11:00:00+05:30",
+      "excerpt": "Isolation retest ISO-318: release R2.4; commit b7a91f2; service atlas-assistant; environment production. Customer ALPHA received document BETA-017, which belongs to customer BETA. Reopening defect ISO-DEF-12."
+    },
+    {
+      "issue_key": "KAN-1020",
+      "source_id": "REC-5825",
+      "comment_id": "13991",
+      "url": "https://shalininithya001.atlassian.net/browse/KAN-1020?focusedCommentId=13991",
+      "use": "inapplicable",
+      "note": "QA test result applies to previous release R2.3 and commit 42d09ce, not target scope.",
+      "recorded_actor": "Priya Nair",
+      "recorded_role": "QA Lead",
+      "recorded_event_time": "2026-11-08T17:00:00+05:30",
+      "excerpt": "Isolation verification ISO-290: release R2.3; commit 42d09ce; service atlas-assistant; environment production. 40 of 40 isolation cases pass. No cross-customer documents returned."
+    }
+  ],
+  "outstanding": [
+    "Fix cross-customer document exposure defect ISO-DEF-12 and retest customer document isolation on target build (R2.4, commit b7a91f2, production)."
+  ],
+  "title": "[REQ-02] Customer document isolation",
+  "acceptance_criterion": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+  "mandatory": true,
+  "assessment_status": "done",
+  "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1066"
+}

@@ -1,0 +1,97 @@
+{
+  "project": "KAN",
+  "dataset_label": "tyn-release-assessment-v2",
+  "release": "R2.4",
+  "completed": {
+    "KAN-892": {
+      "requirement_key": "KAN-892",
+      "requirement_id": "REQ-01",
+      "decision": "PASS",
+      "rationale": "QA Lead Priya Nair conducted regression run REG-804 on the target build (release R2.4, commit b7a91f2, service atlas-assistant, environment production) as documented in comment KAN-1119#14484, resulting in 146 of 146 mandatory regression cases passing. The earlier regression run REG-779 in comment KAN-933#13552 applied to commit 9c3e1aa and is inapplicable to the target commit. The acceptance criterion is fully satisfied.",
+      "evidence": [
+        {
+          "issue_key": "KAN-1119",
+          "source_id": "REC-2081",
+          "comment_id": "14484",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-1119?focusedCommentId=14484",
+          "use": "decisive",
+          "note": "QA Lead Priya Nair confirmed regression run REG-804 passed 146 of 146 mandatory regression test cases on the target build (release R2.4, commit b7a91f2, service atlas-assistant, environment production).",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-08T14:00:00+05:30",
+          "excerpt": "Completed regression run REG-804: release R2.4; commit b7a91f2; service atlas-assistant; environment production. 146 of 146 mandatory regression cases pass."
+        },
+        {
+          "issue_key": "KAN-933",
+          "source_id": "REC-2299",
+          "comment_id": "13552",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-933?focusedCommentId=13552",
+          "use": "inapplicable",
+          "note": "Regression run REG-779 recorded 3 failures on an earlier commit (9c3e1aa) and is inapplicable to the target build commit b7a91f2.",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-06T15:00:00+05:30",
+          "excerpt": "Regression run REG-779: release R2.4; commit 9c3e1aa; service atlas-assistant; environment production. 143 of 146 mandatory cases pass; 3 failures in citation formatting."
+        }
+      ],
+      "outstanding": [],
+      "title": "[REQ-01] Automated regression tests",
+      "acceptance_criterion": "All automated regression cases must pass on the target build.",
+      "mandatory": true,
+      "assessment_status": "done",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-892"
+    },
+    "KAN-1066": {
+      "requirement_key": "KAN-1066",
+      "requirement_id": "REQ-02",
+      "decision": "FAIL",
+      "rationale": "Requirement REQ-02 fails because target-scope QA evidence shows a confirmed cross-customer document exposure defect on target commit b7a91f2. Specifically, QA Lead Priya Nair recorded in KAN-1109#14427 that under target release R2.4, commit b7a91f2, atlas-assistant, production, customer ALPHA received document BETA-017 belonging to customer BETA, reopening defect ISO-DEF-12. This directly violates the acceptance criterion requiring every isolation case to pass with no cross-customer document exposure. Evidence in KAN-1020#13991 is inapplicable as it pertains to release R2.3 / commit 42d09ce.",
+      "evidence": [
+        {
+          "issue_key": "KAN-1109",
+          "source_id": "REC-1001",
+          "comment_id": "14427",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-1109?focusedCommentId=14427",
+          "use": "decisive",
+          "note": "QA Lead retest on target scope (release R2.4, commit b7a91f2, service atlas-assistant, environment production) failed with customer ALPHA receiving customer BETA's document BETA-017, reopening defect ISO-DEF-12.",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-08T11:00:00+05:30",
+          "excerpt": "Isolation retest ISO-318: release R2.4; commit b7a91f2; service atlas-assistant; environment production. Customer ALPHA received document BETA-017, which belongs to customer BETA. Reopening defect ISO-DEF-12."
+        },
+        {
+          "issue_key": "KAN-1020",
+          "source_id": "REC-5825",
+          "comment_id": "13991",
+          "url": "https://shalininithya001.atlassian.net/browse/KAN-1020?focusedCommentId=13991",
+          "use": "inapplicable",
+          "note": "QA test result applies to previous release R2.3 and commit 42d09ce, not target scope.",
+          "recorded_actor": "Priya Nair",
+          "recorded_role": "QA Lead",
+          "recorded_event_time": "2026-11-08T17:00:00+05:30",
+          "excerpt": "Isolation verification ISO-290: release R2.3; commit 42d09ce; service atlas-assistant; environment production. 40 of 40 isolation cases pass. No cross-customer documents returned."
+        }
+      ],
+      "outstanding": [
+        "Fix cross-customer document exposure defect ISO-DEF-12 and retest customer document isolation on target build (R2.4, commit b7a91f2, production)."
+      ],
+      "title": "[REQ-02] Customer document isolation",
+      "acceptance_criterion": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "mandatory": true,
+      "assessment_status": "done",
+      "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1066"
+    }
+  },
+  "failed": {
+    "KAN-1028": {
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "assessment_status": "incomplete",
+      "reason": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure."
+    },
+    "KAN-856": {
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "assessment_status": "incomplete",
+      "reason": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure."
+    }
+  }
+}

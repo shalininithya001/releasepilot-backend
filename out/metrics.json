@@ -1,0 +1,24 @@
+{
+  "wall_seconds": 4898.6,
+  "phase_seconds": {
+    "discovery": 102.9,
+    "assessment": 4795.7,
+    "total": 4898.6
+  },
+  "tool_calls": 257,
+  "jira_api_calls": 194,
+  "jira_api_failures": 0,
+  "unique_issues_opened": 42,
+  "llm_usage": {
+    "nvidia": {
+      "calls": 134,
+      "prompt_tokens": 585534,
+      "completion_tokens": 18010,
+      "total_tokens": 603544,
+      "failures": 5
+    }
+  },
+  "providers_configured": [
+    "nvidia:mistralai/mistral-large-4-1t-a52b"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "wall_seconds": 1712.7,
+  "phase_seconds": {
+    "discovery": 43.2,
+    "assessment": 1669.5,
+    "total": 1712.7
+  },
+  "tool_calls": 32,
+  "jira_api_calls": 45,
+  "jira_api_failures": 0,
+  "unique_issues_opened": 17,
+  "llm_usage": {
+    "gemini": {
+      "calls": 18,
+      "prompt_tokens": 72368,
+      "completion_tokens": 718,
+      "total_tokens": 76452,
+      "failures": 34
+    }
+  },
+  "providers_configured": [
+    "gemini:gemini-3.5-flash"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "requirement_key": "KAN-856",
+  "requirement_id": "REQ-04",
+  "decision": "INSUFFICIENT_EVIDENCE",
+  "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+  "evidence": [],
+  "outstanding": [
+    "Re-run the assessment for this requirement."
+  ],
+  "title": "[REQ-04] Response latency",
+  "acceptance_criterion": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+  "mandatory": true,
+  "assessment_status": "incomplete",
+  "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-856"
+}

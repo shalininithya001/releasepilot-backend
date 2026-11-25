@@ -1,0 +1,38 @@
+{
+  "requirement_key": "KAN-892",
+  "requirement_id": "REQ-01",
+  "decision": "PASS",
+  "rationale": "QA Lead Priya Nair conducted regression run REG-804 on the target build (release R2.4, commit b7a91f2, service atlas-assistant, environment production) as documented in comment KAN-1119#14484, resulting in 146 of 146 mandatory regression cases passing. The earlier regression run REG-779 in comment KAN-933#13552 applied to commit 9c3e1aa and is inapplicable to the target commit. The acceptance criterion is fully satisfied.",
+  "evidence": [
+    {
+      "issue_key": "KAN-1119",
+      "source_id": "REC-2081",
+      "comment_id": "14484",
+      "url": "https://shalininithya001.atlassian.net/browse/KAN-1119?focusedCommentId=14484",
+      "use": "decisive",
+      "note": "QA Lead Priya Nair confirmed regression run REG-804 passed 146 of 146 mandatory regression test cases on the target build (release R2.4, commit b7a91f2, service atlas-assistant, environment production).",
+      "recorded_actor": "Priya Nair",
+      "recorded_role": "QA Lead",
+      "recorded_event_time": "2026-11-08T14:00:00+05:30",
+      "excerpt": "Completed regression run REG-804: release R2.4; commit b7a91f2; service atlas-assistant; environment production. 146 of 146 mandatory regression cases pass."
+    },
+    {
+      "issue_key": "KAN-933",
+      "source_id": "REC-2299",
+      "comment_id": "13552",
+      "url": "https://shalininithya001.atlassian.net/browse/KAN-933?focusedCommentId=13552",
+      "use": "inapplicable",
+      "note": "Regression run REG-779 recorded 3 failures on an earlier commit (9c3e1aa) and is inapplicable to the target build commit b7a91f2.",
+      "recorded_actor": "Priya Nair",
+      "recorded_role": "QA Lead",
+      "recorded_event_time": "2026-11-06T15:00:00+05:30",
+      "excerpt": "Regression run REG-779: release R2.4; commit 9c3e1aa; service atlas-assistant; environment production. 143 of 146 mandatory cases pass; 3 failures in citation formatting."
+    }
+  ],
+  "outstanding": [],
+  "title": "[REQ-01] Automated regression tests",
+  "acceptance_criterion": "All automated regression cases must pass on the target build.",
+  "mandatory": true,
+  "assessment_status": "done",
+  "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-892"
+}

@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "gemini": {
+      "model": "gemini:gemini-3.5-flash",
+      "overall": "NEEDS_REVIEW",
+      "degraded": true,
+      "incomplete": 11,
+      "wall_seconds": 1712.7,
+      "tool_calls": 32,
+      "tokens": 76452,
+      "counts": {
+        "PASS": 1,
+        "INSUFFICIENT_EVIDENCE": 11
+      }
+    },
+    "openrouter": {
+      "model": "openrouter:nvidia/nemotron-3.5-lightning:free",
+      "overall": "BLOCKED",
+      "degraded": true,
+      "incomplete": 7,
+      "wall_seconds": 1327.9,
+      "tool_calls": 71,
+      "tokens": 325940,
+      "counts": {
+        "PASS": 4,
+        "FAIL": 1,
+        "INSUFFICIENT_EVIDENCE": 7
+      }
+    },
+    "nvidia": {
+      "model": "nvidia:mistralai/mistral-large-4-1t-a52b",
+      "overall": "BLOCKED",
+      "degraded": true,
+      "incomplete": 2,
+      "wall_seconds": 2976.9,
+      "tool_calls": 204,
+      "tokens": 482924,
+      "counts": {
+        "PASS": 3,
+        "FAIL": 4,
+        "INSUFFICIENT_EVIDENCE": 5
+      }
+    }
+  },
+  "providers": [
+    "gemini",
+    "openrouter",
+    "nvidia"
+  ],
+  "rows": [
+    {
+      "requirement_id": "REQ-01",
+      "title": "[REQ-01] Automated regression tests",
+      "decisions": {
+        "gemini": "PASS",
+        "openrouter": "PASS",
+        "nvidia": "PASS"
+      },
+      "agree": true,
+      "majority": "PASS"
+    },
+    {
+      "requirement_id": "REQ-02",
+      "title": "[REQ-02] Customer document isolation",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "FAIL",
+        "nvidia": "FAIL"
+      },
+      "agree": true,
+      "majority": "FAIL"
+    },
+    {
+      "requirement_id": "REQ-03",
+      "title": "[REQ-03] Answer quality for deployed prompt",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "PASS",
+        "nvidia": "INSUFFICIENT_EVIDENCE"
+      },
+      "agree": false,
+      "majority": null
+    },
+    {
+      "requirement_id": "REQ-04",
+      "title": "[REQ-04] Response latency",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "PASS",
+        "nvidia": "PASS"
+      },
+      "agree": true,
+      "majority": "PASS"
+    },
+    {
+      "requirement_id": "REQ-05",
+      "title": "[REQ-05] Model usage cost",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "PASS",
+        "nvidia": "FAIL"
+      },
+      "agree": false,
+      "majority": null
+    },
+    {
+      "requirement_id": "REQ-06",
+      "title": "[REQ-06] Production security approval",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "INSUFFICIENT_EVIDENCE*"
+      },
+      "agree": null,
+      "majority": null
+    },
+    {
+      "requirement_id": "REQ-07",
+      "title": "[REQ-07] Sensitive log redaction",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "INSUFFICIENT_EVIDENCE*"
+      },
+      "agree": null,
+      "majority": null
+    },
+    {
+      "requirement_id": "REQ-08",
+      "title": "[REQ-08] Human handoff delivery",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "FAIL"
+      },
+      "agree": null,
+      "majority": "FAIL"
+    },
+    {
+      "requirement_id": "REQ-09",
+      "title": "[REQ-09] Rollback rehearsal",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "INSUFFICIENT_EVIDENCE"
+      },
+      "agree": null,
+      "majority": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "requirement_id": "REQ-10",
+      "title": "[REQ-10] Document parsing completeness",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "PASS"
+      },
+      "agree": null,
+      "majority": "PASS"
+    },
+    {
+      "requirement_id": "REQ-11",
+      "title": "[REQ-11] Accessible keyboard handoff",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "INSUFFICIENT_EVIDENCE"
+      },
+      "agree": null,
+      "majority": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "requirement_id": "REQ-12",
+      "title": "[REQ-12] Streaming completion integrity",
+      "decisions": {
+        "gemini": "INSUFFICIENT_EVIDENCE*",
+        "openrouter": "INSUFFICIENT_EVIDENCE*",
+        "nvidia": "FAIL"
+      },
+      "agree": null,
+      "majority": "FAIL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "requirement_key": "KAN-1028",
+  "requirement_id": "REQ-03",
+  "decision": "INSUFFICIENT_EVIDENCE",
+  "rationale": "The agent did not complete this assessment (the language model was unavailable). No evidence was evaluated to a conclusion; this is not a demonstrated failure.",
+  "evidence": [],
+  "outstanding": [
+    "Re-run the assessment for this requirement."
+  ],
+  "title": "[REQ-03] Answer quality for deployed prompt",
+  "acceptance_criterion": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+  "mandatory": true,
+  "assessment_status": "incomplete",
+  "requirement_url": "https://shalininithya001.atlassian.net/browse/KAN-1028"
+}
